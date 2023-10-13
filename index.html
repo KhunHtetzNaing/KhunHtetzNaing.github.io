@@ -15,11 +15,11 @@
      -->
     <script>
         function ios(video_url) {
-            return "vlc-x-callback://x-callback-url/stream?url=" + video_url+"&filename=From Kyaw Kwa"
+            return "vlc-x-callback://x-callback-url/stream?url=" + video_url
         }
 
         function android(video_url) {
-            return "intent:" + video_url + "#Intent;type=video/*;package=org.videolan.vlc;action=android.intent.action.VIEW;S.title=From Kyaw Kwa;end"
+            return "intent:" + video_url + "#Intent;type=video/*;package=org.videolan.vlc;action=android.intent.action.VIEW;end"
         }
 
         function open(uri) {
