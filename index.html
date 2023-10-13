@@ -40,7 +40,6 @@
             if (searchParams.has(launch_in_vlc)) {
                 // Access the individual parameters
                 const target = searchParams.get(launch_in_vlc);
-                open(android(target))
                 if (/Android/i.test(navigator.userAgent)) {
                     // Code for Android
                     open(android(target))
