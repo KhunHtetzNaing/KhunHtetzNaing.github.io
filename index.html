@@ -32,10 +32,10 @@
 
         // Create a URLSearchParams object from the query string
         const searchParams = url.searchParams;
-
-        if (searchParams.has('url')) {
+        const launch_in_vlc = "launch_in_vlc"
+        if (searchParams.has(launch_in_vlc)) {
             // Access the individual parameters
-            const target = searchParams.get('url');
+            const target = searchParams.get(launch_in_vlc);
 
             if (/Android/i.test(navigator.userAgent)) {
                 // Code for Android
@@ -47,8 +47,6 @@
                 document.write("Only for Android & iOS!")
             }
 
-        } else {
-            document.write("Required `url` parameter!");
         }
 
 
