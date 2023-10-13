@@ -23,8 +23,12 @@
             return "intent:" + video_url + "#Intent;type=video/*;package=org.videolan.vlc;action=android.intent.action.VIEW;S.title=Hello;end"
         }
 
-        function open(target) {
-            window.open(target, '_blank');
+        function open(uri) {
+            var link = document.createElement("a");
+            link.href = uri;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
         }
 
         function launch_in_vlc(){
@@ -53,6 +57,7 @@
             }
         }
 
+        launch_in_vlc()
 
     </script>
 </body>
