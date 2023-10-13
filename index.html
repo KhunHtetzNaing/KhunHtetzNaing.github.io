@@ -15,11 +15,11 @@
      -->
     <script>
         function ios(video_url) {
-            return "vlc-x-callback://x-callback-url/stream?url=" + video_url
+            return "vlc-x-callback://x-callback-url/stream?url=" + video_url+"&filename=From Kyaw Kwa"
         }
 
         function android(video_url) {
-            return "intent:" + video_url + "#Intent;type=video/*;package=org.videolan.vlc;action=android.intent.action.VIEW;S.title=Hello;end"
+            return "intent:" + video_url + "#Intent;type=video/*;package=org.videolan.vlc;action=android.intent.action.VIEW;S.title=From Kyaw Kwa;end"
         }
 
         function open(uri) {
@@ -36,10 +36,10 @@
 
             // Create a URLSearchParams object from the query string
             const searchParams = url.searchParams;
-            const launch_in_vlc = "launch_in_vlc"
-            if (searchParams.has(launch_in_vlc)) {
+            const launch_in_vlc_key = "launch_in_vlc"
+            if (searchParams.has(launch_in_vlc_key)) {
                 // Access the individual parameters
-                const target = searchParams.get(launch_in_vlc);
+                const target = searchParams.get(launch_in_vlc_key);
                 if (/Android/i.test(navigator.userAgent)) {
                     // Code for Android
                     open(android(target))
@@ -51,7 +51,7 @@
                 }
 
             }else{
-                document.write("Required: "+launch_in_vlc)
+                document.write("Required: "+launch_in_vlc_key)
             }
         }
 
