@@ -1,1 +1,58 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch in VLC</title>
+</head>
+
+<body>
+    <!-- 
+        https://wiki.videolan.org/Android_Player_Intents/
+        https://wiki.videolan.org/Documentation:IOS/#x-callback-url
+
+        https://developer.chrome.com/docs/multidevice/android/intents/
+     -->
+    <script>
+        function ios(video_url) {
+            return "vlc-x-callback://x-callback-url/stream?url=" + video_url
+        }
+
+        function android(video_url) {
+            return "intent:" + video_url + "#Intent;type=video/*;package=org.videolan.vlc;action=android.intent.action.VIEW;S.title=Hello;end"
+        }
+
+        function open(target) {
+            window.open(target, '_self');
+        }
+
+        // Get the current URL
+        const url = new URL(window.location.href);
+
+        // Create a URLSearchParams object from the query string
+        const searchParams = url.searchParams;
+
+        if (searchParams.has('url')) {
+            // Access the individual parameters
+            const target = searchParams.get('url');
+
+            if (/Android/i.test(navigator.userAgent)) {
+                // Code for Android
+                open(android(target))
+            } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                // Code for iOS
+                open(ios(target))
+            } else {
+                document.write("Only for Android & iOS!")
+            }
+
+        } else {
+            document.write("Required `url` parameter!");
+        }
+
+
+    </script>
+</body>
+
+</html>
