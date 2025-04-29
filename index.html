@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khun Htetz Naing</title>
+  
+  <!-- Material Design 3 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root {
+      /* Light theme - Material Design 3 color system with 4CAF50 as primary */
+      --md-sys-color-primary: #4CAF50;
+      --md-sys-color-on-primary: #ffffff;
+      --md-sys-color-primary-container: #B8F5B9;
+      --md-sys-color-on-primary-container: #002201;
+      --md-sys-color-secondary: #53634F;
+      --md-sys-color-on-secondary: #ffffff;
+      --md-sys-color-secondary-container: #D6E8CE;
+      --md-sys-color-on-secondary-container: #111F0F;
+      --md-sys-color-surface: #FAFDF6;
+      --md-sys-color-on-surface: #1A1C19;
+      --md-sys-color-surface-variant: #DFE4D7;
+      --md-sys-color-on-surface-variant: #424940;
+      --md-sys-color-outline: #727970;
+      --md-sys-color-error: #BA1A1A;
+      --md-elevation-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+      --md-elevation-2: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+      --md-elevation-3: 0 10px 20px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.10);
+      --transition-speed: 0.3s;
+    }
+    
+    [data-theme="dark"] {
+      /* Dark theme - Material Design 3 color system with 4CAF50 as primary */
+      --md-sys-color-primary: #9DD89E;
+      --md-sys-color-on-primary: #003A01;
+      --md-sys-color-primary-container: #1F5321;
+      --md-sys-color-on-primary-container: #B8F5B9;
+      --md-sys-color-secondary: #BBCBB3;
+      --md-sys-color-on-secondary: #263421;
+      --md-sys-color-secondary-container: #3C4B38;
+      --md-sys-color-on-secondary-container: #D6E8CE;
+      --md-sys-color-surface: #1A1C19;
+      --md-sys-color-on-surface: #E2E3DD;
+      --md-sys-color-surface-variant: #424940;
+      --md-sys-color-on-surface-variant: #C1C9BB;
+      --md-sys-color-outline: #8B9389;
+      --md-sys-color-error: #FFB4AB;
+      --md-elevation-1: 0 1px 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.3);
+      --md-elevation-2: 0 3px 6px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.2);
+      --md-elevation-3: 0 10px 20px rgba(0,0,0,0.25), 0 3px 6px rgba(0,0,0,0.2);
+    }
+    
+    /* Theme transition */
+    body, a, button, .project-card, .social-button, .tech-tag, .app-icon, header, footer {
+      transition: background-color var(--transition-speed) ease, 
+                 color var(--transition-speed) ease, 
+                 border-color var(--transition-speed) ease,
+                 box-shadow var(--transition-speed) ease;
+    }
+    
+    #theme-toggle {
+      cursor: pointer;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--md-sys-color-surface);
+      color: var(--md-sys-color-on-surface);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    
+    /* Header styles */
+    header {
+      background-color: var(--md-sys-color-surface);
+      padding: 24px 0;
+      box-shadow: var(--md-elevation-1);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .profile-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      padding: 24px 0;
+    }
+    
+    .profile-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--md-elevation-1);
+      flex-shrink: 0;
+    }
+    
+    .profile-info {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .profile-info h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface);
+    }
+    
+    .profile-info p {
+      margin: 8px 0;
+      font-size: 16px;
+      color: var(--md-sys-color-on-surface-variant);
+    }
+    
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-top: 12px;
+      width: 100%;
+    }
+    
+    .contact-info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--md-sys-color-primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+    
+    .contact-item:hover {
+      color: var(--md-sys-color-secondary);
+    }
+    
+    .contact-item .material-icons {
+      font-size: 18px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-left: auto;
+    }
+    
+    .social-button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--md-sys-color-primary-container);
+      color: var(--md-sys-color-on-primary-container);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: var(--md-elevation-1);
+    }
+    
+    .social-button:hover {
+      background-color: var(--md-sys-color-primary);
+      color: var(--md-sys-color-on-primary);
+      box-shadow: var(--md-elevation-2);
+      transform: translateY(-2px);
+    }
+    
+    /* Projects section */
+    .section-title {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 48px 0 24px;
+      color: var(--md-sys-color-primary);
+      border-bottom: 2px solid var(--md-sys-color-outline);
+      padding-bottom: 8px;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    
+    .project-card {
+      background-color: var(--md-sys-color-surface);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--md-elevation-1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .project-card:hover {
+      box-shadow: var(--md-elevation-3);
+      transform: translateY(-4px);
+    }
+    
+    .project-header {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid var(--md-sys-color-surface-variant);
+    }
+    
+    .app-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    .project-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface);
+    }
+    
+    .project-content {
+      padding: 16px;
+      flex-grow: 1;
+    }
+    
+    .project-description {
+      margin: 0;
+      font-size: 14px;
+      color: var(--md-sys-color-on-surface-variant);
+      line-height: 1.5;
+    }
+    
+    .project-tech {
+      padding: 8px 16px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .tech-tag {
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 16px;
+      background-color: var(--md-sys-color-secondary-container);
+      color: var(--md-sys-color-on-secondary-container);
+      transition: all 0.2s ease;
+    }
+    
+    .project-card:hover .tech-tag {
+      background-color: var(--md-sys-color-primary-container);
+      color: var(--md-sys-color-on-primary-container);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: var(--md-sys-color-on-surface-variant);
+      font-size: 14px;
+      border-top: 1px solid var(--md-sys-color-outline);
+      margin-top: 48px;
+    }
+    
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .profile-photo {
+        margin: 0 auto;
+      }
+      
+      .profile-info {
+        text-align: center;
+        width: 100%;
+      }
+      
+      .contact-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .contact-info {
+        justify-content: center;
+      }
+      
+      .social-links {
+        margin: 16px 0 0;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="profile-section">
+        <img src="https://avatars.githubusercontent.com/u/12862097" alt="Khun Htetz Naing" class="profile-photo">
+        
+        <div class="profile-info">
+          <h1>Khun Htetz Naing</h1>
+          <p>Android Developer from Myanmar 🇲🇲</p>
+          
+          <div class="contact-section">
+            <div class="contact-info">
+              <a href="mailto:dev@zfont.app" class="contact-item">
+                <i class="material-icons">email</i>
+                dev@zfont.app
+              </a>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://www.facebook.com/iamHtetzNaing" target="_blank" class="social-button" aria-label="GitHub">
+                <i class="material-icons">facebook</i>
+              </a>
+              <a href="https://github.com/KhunHtetzNaing/" target="_blank" class="social-button" aria-label="LinkedIn">
+                <i class="material-icons">code</i>
+              </a>
+              <a href="https://instagram.com/khun_htetz_naing/" target="_blank" class="social-button" aria-label="Twitter">
+                <i class="material-icons">instagram</i>
+              </a>
+              <button id="theme-toggle" class="social-button" aria-label="Toggle Dark/Light Theme">
+                <i class="material-icons">brightness_4</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <a href="https://play.google.com/store/apps/details?id=com.htetznaing.zfont2" target="_blank" class="project-card">
+        <div class="project-header">
+          <img src="./public/images/zfont.webp" alt="zFont 3 App Icon" class="app-icon">
+          <h3 class="project-title">zFont 3</h3>
+        </div>
+        <div class="project-content">
+          <p class="project-description">✅ #1 Font changer for Samsung, Vivo, OnePlus, ASUS, LG, OPPO, Huawei, Honor, Realme, Tecno, and Infinix 🎉</p>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Kotlin</span>
+          <span class="tech-tag">Material 3</span>
+          <span class="tech-tag">Font</span>
+        </div>
+      </a>
+      
+      <!-- Project 2 -->
+      <a href="https://play.google.com/store/apps/details?id=com.htetznaing.fonttools" target="_blank" class="project-card">
+        <div class="project-header">
+          <img src="./public/images/zfont_tool.webp" alt="zFont Tool App Icon" class="app-icon">
+          <h3 class="project-title">zFont Tool</h3>
+        </div>
+        <div class="project-content">
+          <p class="project-description">🛠 Font Color Changer, Remover, Merger, Converter, and Emoji Unpack/Repack ✅</p>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Kotlin</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Font</span>
+        </div>
+      </a>
+      
+      <!-- Project 3 -->
+      <a href="https://play.google.com/store/apps/details?id=com.htetznaing.zfile" target="_blank" class="project-card">
+        <div class="project-header">
+          <img src="./public/images/zfile.webp" alt="zFile App Icon" class="app-icon">
+          <h3 class="project-title">zFile</h3>
+        </div>
+        <div class="project-content">
+          <p class="project-description">A simple yet powerful Android file manager with modern UI and comprehensive file management capabilities 📁</p>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Kotlin</span>
+          <span class="tech-tag">File Management</span>
+          <span class="tech-tag">Material Design</span>
+        </div>
+      </a>
+      
+      <!-- Project 4 -->
+      <a href="https://play.google.com/store" target="_blank" class="project-card">
+        <div class="project-header">
+          <img src="./public/images/adb_otg.webp" alt="ADB⚡OTG App Icon" class="app-icon">
+          <h3 class="project-title">ADB⚡OTG - Android Debug Bridge</h3>
+        </div>
+        <div class="project-content">
+          <p class="project-description">Advanced Android debugging tool that enables ADB commands directly from your device without requiring a computer connection</p>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Kotlin</span>
+          <span class="tech-tag">ADB</span>
+          <span class="tech-tag">Material 3</span>
+        </div>
+      </a>
+      
+      <!-- Project 5 -->
+      <a href="https://play.google.com/store/apps/details?id=com.htetznaing.dic" target="_blank" class="project-card">
+        <div class="project-header">
+          <img src="./public/images/pao_dic.webp" alt="Pa'O Myanmar Dictionary App Icon" class="app-icon">
+          <h3 class="project-title">Pa'O Myanmar Dictionary</h3>
+        </div>
+        <div class="project-content">
+          <p class="project-description">Simple Pa'O - Myanmar dictionary for quick word lookups and translations with offline support</p>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Material You</span>
+          <span class="tech-tag">SQLite</span>
+        </div>
+      </a>
+      
+      <!-- Project 6 -->
+      <a href="https://play.google.com/store" target="_blank" class="project-card">
+        <div class="project-header">
+          <img src="./public/images/leik_pao.webp" alt="Leik Pa'O App Icon" class="app-icon">
+          <h3 class="project-title">လိတ်ပအိုဝ်ႏ - Leik Pa'O</h3>
+        </div>
+        <div class="project-content">
+          <p class="project-description">A comprehensive Pa'O Book Reader with customizable reading experience and library management features</p>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Material You</span>
+          <span class="tech-tag">E-reader</span>
+        </div>
+      </a>
+    </div>
+    
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Khun Htetz Naing</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = themeToggle.querySelector('i.material-icons');
+      
+      // Check for saved theme preference or respect OS setting
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const savedTheme = localStorage.getItem('theme');
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.textContent = 'brightness_7'; // Sun icon for dark mode
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeIcon.textContent = 'brightness_4'; // Moon icon for light mode
+      }
+      
+      // Handle theme toggle click
+      themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        let targetTheme = 'light';
+        
+        if (currentTheme === 'light') {
+          targetTheme = 'dark';
+          themeIcon.textContent = 'brightness_7'; // Sun icon
+        } else {
+          themeIcon.textContent = 'brightness_4'; // Moon icon
+        }
+        
+        document.documentElement.setAttribute('data-theme', targetTheme);
+        localStorage.setItem('theme', targetTheme);
+      });
+    });
+  </script>
+</body>
+</html>
