@@ -1,10 +1,58 @@
+# Khun Htetz Naing
 
-# Hey 👋 What's up?
+Android developer from Myanmar. I'm Pa'O ethnic, born in HsiHseng, South Shan State. My interest in Android started in 2014, and in 2018 I built zFont — my most successful project. It pushed me deep into Android reverse engineering and bypassing OEM font restrictions. Today I build Kotlin and Flutter apps for font tools, file management, ADB utilities, and the Pa'O community.
 
-My name is Khun Htetz Naing. I'm from Myanmar 🇲🇲
+**Languages:** Kotlin · Dart · JavaScript · Python · TypeScript · Bash
 
-I like to create useful apps and focus on Android development. zFont is one of the most successful apps I have created.
+---
 
-| Name | zFont Tool | ADB⚡OTG
-|--|--|--|
-|[![zFont 3 - Android Debug Bridge](https://play-lh.googleusercontent.com/bAqDXiUoIxz6LxtbGI8FNbF7x57dgMW8e17lo4SbPtcOwZib4NOR_Jeln5v8OtRPT3U=w100-h100-rw)](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2)|[![zFont Tool](https://play-lh.googleusercontent.com/yBsPSoIIU6e504Nt2c_870GiWwS2Q5SNgvaJCouuHXfwF1I2Aw7oj9-fI5Q-EZdjDTpM=w100-h100-rw)](https://play.google.com/store/apps/details?id=com.htetznaing.fonttools)|[![ADB⚡OTG - Android Debug Bridge](https://play-lh.googleusercontent.com/0PjZiGvdvLugufsxB4XH9gJkH_zG7gDsNH3sm6jO28QzV0jw_ROfhOk-3xGE-i1GV1M=w100-h100-rw)](https://play.google.com/store/apps/details?id=com.htetznaing.adbotg)
+## Apps
+
+### zFont 3
+Font changer for Samsung, Vivo, OnePlus, ASUS, LG, OPPO, Huawei, Honor, Realme, Tecno, and Infinix.
+
+[![Download on Google Play](https://play-lh.googleusercontent.com/bAqDXiUoIxz6LxtbGI8FNbF7x57dgMW8e17lo4SbPtcOwZib4NOR_Jeln5v8OtRPT3U=w80-h80-rw)](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2)
+
+---
+
+### zFont Tool
+Font color changer, remover, merger, converter, and emoji unpack/repack tool.
+
+[![Download on Google Play](https://play-lh.googleusercontent.com/yBsPSoIIU6e504Nt2c_870GiWwS2Q5SNgvaJCouuHXfwF1I2Aw7oj9-fI5Q-EZdjDTpM=w80-h80-rw)](https://play.google.com/store/apps/details?id=com.htetznaing.fonttools)
+
+---
+
+### zFile
+Simple, powerful Android file manager with a modern UI.
+
+[![Download on Google Play](https://img.shields.io/badge/Google_Play-zFile-02A052?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.htetznaing.zfile)
+
+---
+
+### ADB OTG — Android Debug Bridge
+Run ADB commands directly from your Android device without a PC.
+
+[![Download on Google Play](https://play-lh.googleusercontent.com/0PjZiGvdvLugufsxB4XH9gJkH_zG7gDsNH3sm6jO28QzV0jw_ROfhOk-3xGE-i1GV1M=w80-h80-rw)](https://play.google.com/store/apps/details?id=com.htetznaing.adbotg)
+
+---
+
+### Pa'O Myanmar Dictionary
+Offline Pa'O – Myanmar dictionary for quick word lookups and translations.
+
+[![Download on Google Play](https://img.shields.io/badge/Google_Play-Pa'O_Dictionary-02A052?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.htetznaing.dic)
+
+---
+
+### လိတ်ပအိုဝ်ႏ — Leik Pa'O
+Pa'O book reader with library management and customizable reading experience.
+
+[![Download on Google Play](https://img.shields.io/badge/Google_Play-Leik_Pa'O-02A052?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store)
+
+---
+
+## Contact
+
+- Email: [dev@zfont.app](mailto:dev@zfont.app)
+- GitHub: [KhunHtetzNaing](https://github.com/KhunHtetzNaing)
+- Facebook: [iamHtetzNaing](https://www.facebook.com/iamHtetzNaing)
+- Instagram: [khun_htetz_naing](https://instagram.com/khun_htetz_naing)
