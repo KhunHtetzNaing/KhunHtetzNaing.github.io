@@ -25,7 +25,7 @@ Font color changer, remover, merger, converter, and emoji unpack/repack tool.
 ### zFile
 Simple, powerful Android file manager with a modern UI.
 
-[![Download on Google Play](https://img.shields.io/badge/Google_Play-zFile-02A052?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.htetznaing.zfile)
+[![Download on Google Play](https://play-lh.googleusercontent.com/OQbexhqd6Hyn4AqrN6c453iKPxv7GXrmSnyy-rck6frPLx2nR8az1uinWwYuAvJICko=w80-h80-rw)](https://play.google.com/store/apps/details?id=com.htetznaing.zfile)
 
 ---
 
@@ -39,14 +39,14 @@ Run ADB commands directly from your Android device without a PC.
 ### Pa'O Myanmar Dictionary
 Offline Pa'O – Myanmar dictionary for quick word lookups and translations.
 
-[![Download on Google Play](https://img.shields.io/badge/Google_Play-Pa'O_Dictionary-02A052?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.htetznaing.dic)
+[![Download on Google Play](https://play-lh.googleusercontent.com/eEYRnyBGb5RV6RORm8LIHpaJs7w_HjRDgYhQBrQAPZZjbEKz220b1m9qBrHqs5dJ-Ws=w80-h80-rw)](https://play.google.com/store/apps/details?id=com.htetznaing.dic)
 
 ---
 
 ### လိတ်ပအိုဝ်ႏ — Leik Pa'O
 Pa'O book reader with library management and customizable reading experience.
 
-[![Download on Google Play](https://img.shields.io/badge/Google_Play-Leik_Pa'O-02A052?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store)
+[![Download on Google Play](https://play-lh.googleusercontent.com/cMeGftknfub-z807W7m1TplhnsnFrA3B1lw8NFxuPbzWOkQ5pJmqbAmOWegzu94jMVZf=w80-h80-rw)](https://play.google.com/store)
 
 ---
 
