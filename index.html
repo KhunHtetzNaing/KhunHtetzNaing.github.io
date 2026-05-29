@@ -42,11 +42,11 @@
       padding: 0 24px;
     }
 
-    /* ── Nav ── */
-    nav {
-      padding: 28px 0 0;
+    /* ── Profile top row ── */
+    .profile-top {
       display: flex;
-      justify-content: flex-end;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .toggle {
@@ -130,6 +130,19 @@
     }
 
     /* ── About ── */
+    .about-link {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+      transition: text-decoration-color var(--t), color var(--t);
+    }
+
+    .about-link:hover {
+      color: var(--accent);
+      text-decoration-color: var(--accent);
+    }
+
     .about {
       font-size: 14px;
       color: var(--text-muted);
@@ -202,26 +215,25 @@
 <body>
   <div class="wrap">
 
-    <nav>
-      <button class="toggle" id="toggle" aria-label="Toggle theme">
-        <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
-        </svg>
-        <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-      </button>
-    </nav>
-
     <div class="profile">
       <img src="https://avatars.githubusercontent.com/u/12862097" alt="Khun Htetz Naing" class="avatar">
       <div class="profile-body">
-        <h1>Khun Htetz Naing</h1>
-        <p class="bio">Android Developer &mdash; Myanmar</p>
+        <div class="profile-top">
+          <h1>Khun Htetz Naing</h1>
+          <button class="toggle" id="toggle" aria-label="Toggle theme">
+            <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+            </svg>
+            <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+        </div>
+        <p class="bio">Android Developer &mdash; Myanmar 🇲🇲</p>
         <div class="links">
           <a href="mailto:dev@zfont.app" class="link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -244,7 +256,7 @@
     </div>
 
     <p class="label">About</p>
-    <p class="about">I&rsquo;m Pa&rsquo;O ethnic, born in HsiHseng, South Shan State, Myanmar. My interest in Android started in 2014 when I got my first phone &mdash; an Acer Liquid Z3 &mdash; while working in Bangkok as a painting worker. Back then, rooting was the only way to install Zawgyi Myanmar font on Android, and that curiosity eventually led me to build zFont in 2018 &mdash; my most successful project to date. It pushed me deep into Android reverse engineering and finding ways to bypass font restrictions imposed by OEMs. Today I develop Kotlin and Flutter apps &mdash; font tools, file managers, ADB utilities, and language apps for the Pa&rsquo;O community. Kotlin is my primary language; I also work with Flutter, JavaScript, Python, TypeScript, and Bash.</p>
+    <p class="about">I&rsquo;m <a href="https://en.wikipedia.org/wiki/Pa%27O_people" target="_blank" rel="noopener" class="about-link">Pa&rsquo;O</a> ethnic, born in HsiHseng, South Shan State, Myanmar. My interest in Android started in 2014 when I got my first phone &mdash; an Acer Liquid Z3 &mdash; while working in Bangkok as a painting worker. Back then, rooting was the only way to install Zawgyi Myanmar font on Android, and that curiosity eventually led me to build zFont in 2018 &mdash; my most successful project to date. It pushed me deep into Android reverse engineering and finding ways to bypass font restrictions imposed by OEMs. Today I develop Kotlin and Flutter apps &mdash; font tools, file managers, ADB utilities, and language apps for the Pa&rsquo;O community. Kotlin is my primary language; I also work with Dart, JavaScript, Python, and Bash.</p>
 
     <p class="label">Projects</p>
 
